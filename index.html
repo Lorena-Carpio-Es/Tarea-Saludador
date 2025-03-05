@@ -5,27 +5,29 @@
   </head>
   <body>
     <h1>Saludador</h1>
-    <!-- Formulario para ingresar el nombre, género, edad y saludar -->
     <form id="saludar-form">
       <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" placeholder="Ingresa tu nombre" />
+      <input type="text" id="nombre" />
 
       <label for="genero">Género:</label>
       <select id="genero">
-        <option value="">Selecciona tu género</option>
         <option value="hombre">Hombre</option>
         <option value="mujer">Mujer</option>
       </select>
 
       <label for="edad">Edad:</label>
-      <input type="number" id="edad" placeholder="Ingresa tu edad" />
+      <input type="number" id="edad" />
+
+      <label for="idioma">Idioma:</label>
+      <select id="idioma">
+        <option value="es">Español</option>
+        <option value="en">Inglés</option>
+      </select>
 
       <input type="submit" value="Saludar" id="saludar-button" />
     </form>
-    <!-- Div para mostrar el resultado -->
     <div id="resultado-div"></div>
 
-    <!-- Importar el script de presenter.js -->
     <script type="module" src="./src/presenter.js"></script>
   </body>
 </html>
