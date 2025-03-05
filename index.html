@@ -5,10 +5,18 @@
   </head>
   <body>
     <h1>Saludador</h1>
-    <!-- Formulario para ingresar el nombre y saludar -->
+    <!-- Formulario para ingresar el nombre, género y saludar -->
     <form id="saludar-form">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" placeholder="Ingresa tu nombre" />
+
+      <label for="genero">Género:</label>
+      <select id="genero">
+        <option value="">Selecciona tu género</option>
+        <option value="hombre">Hombre</option>
+        <option value="mujer">Mujer</option>
+      </select>
+
       <input type="submit" value="Saludar" id="saludar-button" />
     </form>
     <!-- Div para mostrar el resultado -->
