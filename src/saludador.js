@@ -1,5 +1,5 @@
-function saludar() {
-  return "Hola";
+function saludar(nombre = "") {
+  return `Hola, ${nombre}`;
 }
 
 export default saludar;
