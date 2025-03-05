@@ -34,6 +34,16 @@ describe("Saludar", () => {
     expect(saludar("Maria", fecha, "mujer")).toEqual("Buenos días, Sra. Maria");
   });
 
+  it("deberia saludar con 'Buenos días, Sr. Juan' si es mayor de 30", () => {
+    const fecha = new Date(2023, 10, 1, 9, 0); // 9:00 AM
+    expect(saludar("Juan", fecha, "hombre", 35)).toEqual("Buenos días, Sr. Juan");
+  });
+
+  it("deberia saludar con 'Buenos días, Juan' si es menor de 30", () => {
+    const fecha = new Date(2023, 10, 1, 9, 0); // 9:00 AM
+    expect(saludar("Juan", fecha, "hombre", 25)).toEqual("Buenos días, Juan");
+  });
+
 });
 
 
