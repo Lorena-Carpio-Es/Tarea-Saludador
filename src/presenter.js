@@ -9,7 +9,8 @@ form.addEventListener("submit", (event) => {
   event.preventDefault(); // Evitar que el formulario se envíe
 
   const nombre = nombreInput.value; // Obtener el valor del campo de entrada
-  const saludo = saludar(nombre); // Llamar a la función saludar con el nombre
+  const fecha = new Date(); // Obtener la fecha y hora actual del sistema
+  const saludo = saludar(nombre, fecha); // Llamar a la función saludar con el nombre y la fecha
 
   // Mostrar el resultado en el div
   div.innerHTML = "<p>" + saludo + "</p>";
