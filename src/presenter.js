@@ -1,15 +1,12 @@
-import sumar from "./sumador";
+import saludar from "./saludador.js"; // Importar la función saludar
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const form = document.querySelector("#saludar-form"); // Obtener el formulario
+const div = document.querySelector("#resultado-div"); // Obtener el div para mostrar el resultado
 
+// Escuchar el evento "submit" del formulario
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
+  event.preventDefault(); // Evitar que el formulario se envíe
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  // Llamar a la función saludar y mostrar el resultado en el div
+  div.innerHTML = "<p>" + saludar() + "</p>";
 });
